@@ -1,0 +1,93 @@
+body{
+    background-color: blue;
+    margin:0;
+}
+
+.wrapper{
+    background-color: aliceblue;
+    min-height: auto;
+    display: grid;
+    grid-template-rows: 80px auto;
+    grid-template-areas: 
+    "header"
+    "main"
+}
+
+header{
+    grid-area: header;
+    background-color: lightcoral;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+main{
+    height: auto;
+    display: grid;
+    grid-area: main;
+    grid-template-rows: 250px 70px 70px 200px 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "bild bild bild"
+    "kat1 kat2 kat3"
+    "kat4 kat5 kat6"
+    "sectret1 secret1 secret1"
+    "secret2 secret2 secret2"
+    "secret3 secret3 secret3"
+}
+
+.bild{
+    grid-area: bild;
+
+}
+
+.item{
+    margin: 0 auto 0 20px ;
+    font-size: 40px;
+
+}
+#menu{
+    margin: 0 auto 0 20px ;
+    font-size: 40px !important;
+}
+
+#sok{
+    display: grid;
+    grid-template-columns: 80px 24px;    
+}
+
+.sok{
+    height: 24px;
+    width: 65px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+nav{
+    height: 100vh;
+    width: auto;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    background-color: bisque;
+    transition: all 1s;
+}
+
+.test{
+    left: 0;
+}
+
+li{
+    margin: 0 50px 90px 0;
+    font-size: 20px;
+
+}
+
+#bort{
+    margin:10px;
+}
+
