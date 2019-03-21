@@ -7,6 +7,7 @@ body{
     background-color: aliceblue;
     min-height: auto;
     display: grid;
+    padding-bottom: 10px;
     grid-template-rows: 80px auto;
     grid-template-areas: 
     "header"
@@ -20,33 +21,154 @@ header{
     top: 0;
     display: flex;
     align-items: center;
+    z-index: 10;
 }
 
-main{
+.first{
     height: auto;
-    display: grid;
     grid-area: main;
-    grid-template-rows: 250px 70px 70px 200px 200px;
+    grid-row-gap: 10px;
+    display: grid;
+    grid-template-rows: 250px 70px 70px 200px 230px 200px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
     "bild bild bild"
     "kat1 kat2 kat3"
     "kat4 kat5 kat6"
-    "sectret1 secret1 secret1"
+    "secret1 secret1 secret1"
     "secret2 secret2 secret2"
     "secret3 secret3 secret3"
 }
 
+.category{
+    height: auto;
+    grid-area: main;
+    grid-row-gap: 10px;
+    display: grid;
+    grid-template-rows: 200px 140px 140px 140px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "fakta fakta"
+    "cat1 cat2"
+    "cat3 cat4"
+    "cat5 cat6"
+}
+
+.jokep{
+    grid-area: main;
+    height: auto;
+    grid-row-gap: 10px;
+    display: grid;
+    grid-template-rows: 250px 170px 170px 170px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "joke joke"
+
+}
+
+.joke{
+    grid-area: joke;
+    background-color: darkorchid;
+}
+
+.produkt{
+    margin: 10px;
+    background-color: gainsboro;
+    /* display: flex;
+    justify-items: center; */
+    text-align: center;
+}
+
+.fakta{
+    margin: 20px;
+    grid-area: fakta;
+    background-color: aquamarine;
+}
+
+.cat{
+    margin: 0 auto 0 auto;
+    width: 140px;
+    background-color: coral;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.418);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.rubrik{
+    height: 20px;
+    width: 80px;
+    background-color: rgba(0, 0, 0, 0.418);
+    position: relative;
+    top: 90px;
+    text-align: center;
+    color: white;
+}
+
+.nyhet{
+    height: auto;
+    width: 30%;
+    padding: 8px;
+    background-color: red;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+h3{
+    margin: 0;
+}
+
 .bild{
     grid-area: bild;
+    background-color: coral;
+}
 
+.kat{
+    margin: 0 auto 0 auto;
+    grid-area: kat1 kat2 kat3;
+    width: 70px;
+    background-color: darkseagreen;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.418);
+    border-radius: 50%;
+    transition: all 1s;
+}
+
+.kat:hover{
+    border-radius: 3%;
+
+}
+
+.secret{
+    margin:0 25px 0 25px;
+}
+
+#one{
+    grid-area: secret1;
+    background-color: darkcyan;
+}
+
+#two{
+    grid-area: secret2;
+    background-color: deepskyblue;
+    margin:0 15px 0 15px;
+
+}
+
+#three{
+    grid-area: secret3;
+    background-color: mediumorchid;
 }
 
 .item{
     margin: 0 auto 0 20px ;
     font-size: 40px;
-
 }
+
 #menu{
     margin: 0 auto 0 20px ;
     font-size: 40px !important;
@@ -75,6 +197,7 @@ nav{
     left: -300px;
     background-color: bisque;
     transition: all 1s;
+    z-index: 30;
 }
 
 .test{
@@ -91,3 +214,7 @@ li{
     margin:10px;
 }
 
+.blurred{
+    filter: blur(1.5px);
+    transition: all 1s;
+}
