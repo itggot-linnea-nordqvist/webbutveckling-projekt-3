@@ -1,13 +1,13 @@
 body{
-    background-color: blue;
     margin:0;
+    background-color:  rgba(77, 19, 1);
 }
 
 .wrapper{
-    background-color: aliceblue;
+    grid-area: wrapper;
+    background-color: rgb(77, 19, 1);
     min-height: auto;
     display: grid;
-    padding-bottom: 10px;
     grid-template-rows: 80px auto;
     grid-template-areas: 
     "header"
@@ -16,18 +16,65 @@ body{
 
 header{
     grid-area: header;
-    background-color: lightcoral;
+    background-color: rgb(4, 32, 49);
     position: sticky;
     top: 0;
     display: flex;
     align-items: center;
     z-index: 10;
+    color: rgb(37, 77, 100)
+}
+
+.aboutb{
+    background-color: bisque;
+}
+
+.aboutt{
+    margin: 0 10px 0 10px;
+    color: rgba(159, 78, 52);
+    font-size: 20px;
+}
+
+.aboutinfo{
+    margin: 5% 10% 0 10%;
+    padding: 15px;
+    border-radius: 20px 60px 40px;
+    color: white;
+
+}
+
+#blue{
+    background-color: rgb(37, 77, 101)
+}
+
+#pink{
+    background-color: rgb(16, 52, 73)
+}
+
+#red{
+    background-color: rgb(1, 18, 28)
+}
+
+i{
+    color: white;
+}
+
+i:hover{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    
 }
 
 .first{
     height: auto;
     grid-area: main;
     grid-row-gap: 10px;
+    padding-bottom: 10px;
+
     display: grid;
     grid-template-rows: 250px 70px 70px 200px 230px 200px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -40,11 +87,69 @@ header{
     "secret3 secret3 secret3"
 }
 
+.kund{
+    height: auto;
+    grid-area: main;
+    padding:10%;
+}
+
+.last{
+    grid-column-gap: 10px;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10px;
+}
+
+.titel{
+    height: 40px;
+    background-color: rgb(214, 214, 214);
+    margin-bottom: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+h2{
+    margin: 0;
+}
+
+.saldo{
+    background-color: rgb(214, 214, 214);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(153, 153, 153, 0.801);
+
+}
+.done{
+    background-color: rgb(214, 214, 214);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(153, 153, 153, 0.801);
+
+}
+
+.vara{
+    height: 40px;
+    background-color: rgb(214, 214, 214);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(153, 153, 153, 0.801);
+    padding: 5px;
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+
+
 .category{
     height: auto;
     grid-area: main;
-    grid-row-gap: 10px;
+    grid-row-gap: 15px;
     display: grid;
+    padding-bottom: 10px;
+
     grid-template-rows: 200px 140px 140px 140px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
@@ -58,31 +163,61 @@ header{
     grid-area: main;
     height: auto;
     grid-row-gap: 10px;
+    background-color: rgba(77, 19 ,1);
     display: grid;
-    grid-template-rows: 250px 170px 170px 170px;
+    padding-bottom: 10px;
+
+    grid-template-rows: 250px 180px 180px 180px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "joke joke"
+}
 
+.about{
+    grid-area: main;
+    height: auto;
+    grid-row-gap: 10px;
+    background-color:  rgba(77, 19, 1);
+    display:grid;
+    padding-bottom: 10px;
+    grid-template-rows: 250px auto 220px 220px 220px;
+}
+
+.grey{
+    color: rgb(119, 119, 119);
+    background: none;
 }
 
 .joke{
     grid-area: joke;
-    background-color: darkorchid;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-family: 'Playfair Display', serif;
 }
 
 .produkt{
     margin: 10px;
     background-color: gainsboro;
-    /* display: flex;
-    justify-items: center; */
-    text-align: center;
+    display: flex;
+    box-shadow: 11px 17px 30px 2px rgba(0,0,0,0.56);
+    position: relative;
+
 }
 
 .fakta{
     margin: 20px;
     grid-area: fakta;
-    background-color: aquamarine;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-family: 'Playfair Display', serif;
+
 }
 
 .cat{
@@ -91,7 +226,7 @@ header{
     background-color: coral;
     border-width: 2px;
     border-style: solid;
-    border-color: rgba(0, 0, 0, 0.418);
+    border-color: rgba(44, 11, 0);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -102,9 +237,15 @@ header{
     width: 80px;
     background-color: rgba(0, 0, 0, 0.418);
     position: relative;
-    top: 90px;
+    top: 70%;
     text-align: center;
     color: white;
+}
+
+.text{
+    font-size: 1.5em;
+    text-align: center;
+    
 }
 
 .nyhet{
@@ -123,7 +264,7 @@ h3{
 
 .bild{
     grid-area: bild;
-    background-color: coral;
+    background-image: url(/img/FirstM.jpg);
 }
 
 .kat{
@@ -133,7 +274,7 @@ h3{
     background-color: darkseagreen;
     border-width: 2px;
     border-style: solid;
-    border-color: rgba(0, 0, 0, 0.418);
+    border-color: rgba(44, 11, 0);
     border-radius: 50%;
     transition: all 1s;
 }
@@ -141,6 +282,26 @@ h3{
 .kat:hover{
     border-radius: 3%;
 
+}
+.produkt p{
+    margin:auto;
+    text-align: center;
+    font-size: 50px;
+}
+
+.info{
+    height: 30px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 25px;
+}
+#nyhet{
+    height: 21.33px;
+    position: absolute;
+    top: 10px;
 }
 
 .secret{
@@ -164,6 +325,8 @@ h3{
     background-color: mediumorchid;
 }
 
+
+
 .item{
     margin: 0 auto 0 20px ;
     font-size: 40px;
@@ -181,10 +344,10 @@ h3{
 
 .sok{
     height: 24px;
-    width: 65px;
+    width: 60px;
     border-width: 2px;
     border-style: solid;
-    border-color: black;
+    border-color: rgb(37, 77, 100);
     font-size: 20px;
     padding-left: 10px;
 }
@@ -195,7 +358,7 @@ nav{
     position: fixed;
     top: 0;
     left: -300px;
-    background-color: bisque;
+    background-color: rgb(44, 42, 39);
     transition: all 1s;
     z-index: 30;
 }
@@ -204,10 +367,33 @@ nav{
     left: 0;
 }
 
-li{
-    margin: 0 50px 90px 0;
-    font-size: 20px;
+ul{
+    padding: 0;
+    list-style-type: none;
+}
 
+li a{
+    font-size: 20px;
+    /* display: inline-block; */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 55px;
+}
+li:hover{
+    background-color: black;
+}
+#cat1{
+    background-image: url(/img/RiddleM.jpg)
+}
+
+li{
+    padding: 15px;
+    
+}
+
+.red{
+    background-color: red;
 }
 
 #bort{
@@ -217,4 +403,91 @@ li{
 .blurred{
     filter: blur(1.5px);
     transition: all 1s;
+}
+
+@media only screen and (min-device-width:1224px){
+    .wrapper{
+        grid-template-columns: 70% auto;
+        grid-template-areas: 
+        "header header"
+    
+    }
+    #menu{
+        visibility: hidden;
+    }
+    #bort{
+        visibility: hidden;
+    }
+    nav{
+        height: auto;
+        width: 20%;        
+        left:75%;
+        top: 20px;
+        z-index: 5;
+    }
+    .item{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #sok{
+        margin-right: 0;
+        width: 30%;
+    }
+    .sok{
+        width: 100px;
+    }
+    .first{
+        grid-template-rows: 250px 70px 200px 230px 200px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "bild bild bild bild bild bild"
+        "kat1 kat2 kat3 kat4 kat5 kat6"
+        "secret1 secret1 secret1 secret1 secret1 secret1"
+        "secret2 secret2 secret2 secret2 secret2 secret2"
+        "secret3 secret3 secret3 secret3 secret3 secret3"
+    }
+    .category{
+        grid-template-rows: 200px 240px 240px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "fakta fakta fakta"
+        "cat1 cat2 cat"
+        "cat3 cat4 cat"
+    }
+    .cat{
+        width: 240px;
+    }
+    .rubrik{
+    height: 30px;
+    width: 100px;
+    font-size: 20px;    
+    }
+
+    .jokep{
+        grid-template-rows: 250px 428px 428px 428px;
+    }
+    .about{
+        grid-template-rows: 250px auto 220px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "bild bild bild"
+        "text text text"
+        "info1 info2 info3"
+    }
+    .aboutinfo{
+    margin: 5% 5% 0 5%;
+    }
+    .aboutb{
+        grid-area: bild;
+    }
+    .aboutt{
+        grid-area: text;
+    }
+    
+    .bild{
+        background-color: lightcoral;
+        background-image: none;
+    }
+    #cat1{
+        background-image: url(/img/Riddle.jpg)
+    }
 }
